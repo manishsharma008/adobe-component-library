@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/adobe-component-library/clientlibs"/>
+    <filter root="/apps/adobe-component-library/components"/>
+    <filter root="/apps/adobe-component-library/i18n"/>
+</workspaceFilter>

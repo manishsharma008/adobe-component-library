@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/adobe-component-library",
+        "create path (nt:unstructured) /content/dam/adobe-component-library/jcr:content",
+        "set properties on /content/dam/adobe-component-library/jcr:content\n  set cq:conf{String} to /conf/adobe-component-library\n  set jcr:title{String} to \"Adobe Component Library\"\nend"
+    ]
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/adobe-component-library" mode="merge"/>
+    <filter root="/content/adobe-component-library" mode="merge"/>
+    <filter root="/content/dam/adobe-component-library" mode="merge">
+        <exclude pattern="/content/dam/adobe-component-library(/.*)?"/>
+        <include pattern="/content/dam/adobe-component-library/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/adobe-component-library/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/adobe-component-library" mode="merge"/>
+</workspaceFilter>

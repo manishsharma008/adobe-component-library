@@ -1,0 +1,3 @@
+{
+  "sling.filter.pattern": "/content/adobe-component-library/.*?/(category-page|product-page)"
+}
