@@ -1,10 +1,15 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- ~ Simple SD Text React component for AEM SPA Editor
+ ~ Simple SD Text React component for AEM SPA Editor (TypeScript)
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 import React from 'react';
 import './SdText.css';
 
-export default function SdText(props) {
+export type SdTextProps = {
+  title?: string;
+  description?: string;
+};
+
+export default function SdText(props: SdTextProps): any {
   const { title, description } = props || {};
   if (!title && !description) {
     return null;
