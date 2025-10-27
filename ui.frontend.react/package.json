@@ -10,11 +10,11 @@
     "sync": "aemsync -d -w ../ui.apps/src/main/content"
   },
   "dependencies": {
-    "@adobe/aem-react-editable-components": "^2.0.0",
-    "@adobe/aem-spa-component-mapping": "^2.0.0",
+    "@adobe/aem-react-editable-components": "^2.1.1",
+    "@adobe/aem-spa-component-mapping": "^1.0.0",
     "@adobe/aem-spa-page-model-manager": "^1.5.0",
-    "@adobe/aem-core-components-react-base": "^2.0.0",
-    "@adobe/aem-core-components-react-spa": "^2.0.0",
+    "@adobe/aem-core-components-react-base": "^1.0.0",
+    "@adobe/aem-core-components-react-spa": "^1.0.0",
     "custom-event-polyfill": "^1.0.7",
     "sanitize-html": "^2.3.3",
     "history": "^4.10.1",
