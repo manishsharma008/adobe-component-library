@@ -35,7 +35,8 @@
             
     <module>core</module>
             
-    <!-- <module>ui.frontend</module> -->
+    <!-- Frontend React app builds clientlibs zip used by ui.apps -->
+    <module>ui.frontend.react</module>
              
     <module>ui.apps</module>
             
