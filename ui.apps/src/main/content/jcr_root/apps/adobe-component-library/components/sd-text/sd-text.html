@@ -1,0 +1,10 @@
+<!--
+  Simple SD Text component rendering title and description via Sling Model
+-->
+<sly data-sly-use.model="com.adobe.component.library.core.models.SdTextModel"></sly>
+<div class="cmp-sd-text">
+  <h3 class="cmp-sd-text__title" data-sly-test="${model.title}">${model.title}</h3>
+  <p class="cmp-sd-text__description" data-sly-test="${model.description}">${model.description}</p>
+  <div class="cmp-sd-text__placeholder" data-sly-test="${!model.title && !model.description}">SD Text: Please author Title and Description.</div>
+  </div>
+
