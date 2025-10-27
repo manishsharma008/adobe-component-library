@@ -92,3 +92,13 @@ const TextEditConfig = {
 };
 
 MapTo('adobe-component-library/components/text')(LazyTextComponent, TextEditConfig);
+
+// SD Text component mapping
+const LazySdText = withAsyncImport(() => import(`./SdText/SdText`));
+const SdTextEditConfig = {
+    emptyLabel: 'SD Text',
+    isEmpty: function (props) {
+        return !props || (!props.title && !props.description);
+    }
+};
+MapTo('adobe-component-library/components/sd-text')(LazySdText, SdTextEditConfig);

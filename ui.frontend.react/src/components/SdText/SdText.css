@@ -1,0 +1,14 @@
+.cmp-sd-text {
+  margin: 0 0 1rem 0;
+}
+
+.cmp-sd-text__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.cmp-sd-text__description {
+  margin: 0;
+  color: #444;
+}
+

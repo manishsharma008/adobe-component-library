@@ -15,26 +15,39 @@
  */
 package com.adobe.component.library.core.models;
 
-import org.apache.sling.models.annotations.DefaultInjectionStrategy;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorsspecific.ValueMapValue;
+import com.adobe.cq.export.json.ComponentExporter;
+import com.adobe.cq.export.json.ExporterConstants;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.Exporter;
+import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
-@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class SdTextModel {
+@Getter
+@Model(
+        adaptables = {SlingHttpServletRequest.class, Resource.class},
+        adapters = {SdTextModel.class, ComponentExporter.class},
+        resourceType = SdTextModel.RESOURCE_TYPE,
+        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
+)
+@Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
+public class SdTextModel implements ComponentExporter {
+
+    public static final String RESOURCE_TYPE = "adobe-component-library/components/sd-text";
 
     @ValueMapValue
+    @JsonProperty
     private String title;
 
     @ValueMapValue
+    @JsonProperty
     private String description;
 
-    public String getTitle() {
-        return title;
-    }
-
-    public String getDescription() {
-        return description;
+    @Override
+    public String getExportedType() {
+        return RESOURCE_TYPE;
     }
 }
-
